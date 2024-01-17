@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main() {
+
+	int a = 10; // 대입 연산자( 오른쪽 ->왼쪽)
+
+	int* pa;   //참조 연산자 (주솟값을 주면 값을 읽어드림ㅅㄱ)
+	int* px = &x;
+	int** ppx = &px;
+	printf("X의값: %\n", x);
+	printf("X의값: %\n", *px);
+	printf("X의값: %\n", **ppx);
+
+
+	printf("x의 주솟값: %d\n", &x);
+	printf("x의 주솟값: %d\n", px);
+	printf("x의 주솟값: %d\n", *ppx);
+
+	printf("px의 값: %d\n", &x);
+	printf("px의 값: %d\n", px);
+	printf("px의 값: %d\n", *ppx);
+
+	printf("ppx의 포인터값: %d\n", *ppx);
+	printf("ppx의 더블 포인터값: %d\n", **ppx);
+
+
+
+
+
+
+	return 0;
+
+}

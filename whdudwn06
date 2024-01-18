@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+struct coffee {
+	char name[50];
+	int prince;
+	int shots;
+};
+
+struct student {
+	char name[50];
+	int major[50];
+	int id;
+	struct coffee coffee;
+	
+};
+
+
+
+int main() {
+	struct coffee a;
+	printf("d%", a.prince);
+	a.prince = 2500;
+	strcpy(a.name, "americao");
+	a.shots = 2;
+
+	printf("%s %d %d", a.name, a.shots, a.prince);
+	struct student kim;
+	strcpy(kim.major, "computer");
+	kim.id = 1;
+	kim.coffee = a;
+	printf("이름:%s 전공:%s 커피:%s", kim.name, kim.major, kim.coffee.name);
+	
+
+	
+
+
+	return 0;
+}
+

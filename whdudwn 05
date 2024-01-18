@@ -1,0 +1,19 @@
+#include<stdio.h> // printf/scanf 필수
+#include<stdlib.h>
+#include<string.h>
+
+int main() {
+	int score[40];
+	printf("얼만큼 생성 원함?");
+	scanf("%d", &num);
+	//malloc() 생성
+	int* ptr;
+
+	ptr = (int*)malloc(sizeof(int) * num);
+
+	ptr[0] = 1;
+	ptr[1] = 1;
+	ptr[2] = 1;
+	ptr[3] = 1;
+
+}

@@ -1,0 +1,66 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+
+
+
+
+int main() {
+	
+	int studentNum;
+	printf("반 학생 수 입력:");
+	scanf("%d", &studentNum);
+	
+	int* engScores;
+	engScores = (int*)malloc(studentNum * sizeof(int));
+	for (int i = 0; i < studentNum; i++) {
+		int score;
+		printf("%d번째 영어 점수 입력:", i);
+		scanf("%d", &score);
+		engScores[i] = score;
+
+
+
+
+	}
+
+	int sum = 0;
+	for (int i = 0; i < studentNum; i++) {
+		sum += engScores[i];
+
+	}
+
+	printf("반 평균: %.21f", (double)sum / studentNum);
+	free(engScores); // 삭제
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*int* arr;
+
+	arr = (int *)malloc(5 * sizeof(int));// 얼만큼 무엇을 주겠음 (얼만큼 * 무엇을)
+
+	for (int i = 0; i < 5; i++) {
+		arr[i] = i + 10;
+	}
+	
+	
+	for (int i = 0; i < 5; i++) {
+		printf("%d\n", arr[i]);
+	}
+	free(arr); // 삭제
+	*/
+	return 0;
+}
+
+

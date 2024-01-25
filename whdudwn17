@@ -1,0 +1,87 @@
+#include<stdio.h>
+#include<stdlib.h>
+// 배열 기간으로 스택 구현
+typedef struct Stack {
+	int top;
+	int data[100];
+}Stack;
+
+void initStack(Stack* stack) {
+	stack->top = -1;
+}
+
+void isFull(Stack* stack) {
+	return stack ->top == 99;
+	
+};
+
+void pop(Stack* stack) {
+	if (isEmpty(stack)){
+		printf("나락\n");
+		return;
+
+	}
+	stack->top--;
+
+
+	//0. 맨 바닥 이였을 경우 완된다고 해야함 
+	//1. 그게 아니면 top을 하나 아래로 
+
+
+
+}
+
+
+//stack overflow
+	//1. if top == 100
+	//2. return
+void push(Stack* stack) {
+	if (isFull(stack)) {
+		printf("꽉참 ㅅㄱ\n");
+		return;
+	}
+
+	int num;
+	printf("정수 입력:");
+	scanf("%d", &num);
+	stack->top++;
+	stack->data[stack->top] = num;
+	
+}
+int isEmpty(Stack* stack) {
+	return
+}
+void printStack(Stack* stack) {
+	if (stack->top == -1) {
+		printf("없음 ㅅㄱ\n");
+	}
+	
+	
+	
+	for (int i = 0; i < stack->top; i >= 0; i--) {
+		if (i == stack->top) {
+			printf("%d->", stack->data[i]);
+		}
+		else{
+			printf("<-&d");
+
+		}
+		printf("\n");
+}
+
+
+
+
+int main() {
+	Stack st;
+
+	initStack(&st);
+	push(&st);
+	push(&st);
+	push(&st);
+	printfStack(&st);
+	return 0;
+}
+//1. 정수를 입력 받기
+//2. top ++하기
+//3. stack의 top번째에 정수 입력 받은거

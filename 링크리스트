@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+typedef struct Coffee {
+	char name[50];
+	int price;
+
+}Cofee;
+
+typedef struct Node {
+	Coffee data;
+	struct Node* next;
+}Node;
+
+void createNode(int n) {
+	Node* newNode = (Node*)malloc(sizeof(Node));
+	char name[50];
+	printf("커피이름:");
+	scanf("%s", name);
+
+	int price;
+	printf("가격:");
+	scanf();
+
+
+
+	return newNode;
+}
+
+
+void appenNode(Node**head) {
+	
+	Node* newNode = createNode();
+	if (*head == NULL) {
+		*head = newNode;
+		return;
+	}
+	
+		Node* searcher = *head;
+		while (searcher->next != NULL) {
+			searcher = searcher->next;
+		}
+		searcher->next = newNode;
+	
+}
+void printNode(Node** head) {
+	Node** searcher = *head;
+	while (searcher->next != NULL) {
+		printf("커피:%s 가격:%d\n", searcher->data);
+		searcher = searcher->next;
+	}
+	printf("커피:%s 가격:%d\n")
+}
+
+
+
+
+int main() {
+
+	Node* head = NULL;
+	
+
+	
+
+	return 0;
+}

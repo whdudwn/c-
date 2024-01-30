@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+
+int main() {
+	int arr[] = { 12,34,54,2,3,23,367 };
+	int size = sizeof(arr) / sizeof(int);
+	//gap을 배열 크기의 절반에서 시작하여 1이 될 때까지 감소
+	for (int gap = size / 2; gap > 0; gap /= 2) {
+
+		//각 간격에 대해 간각만큼 떨어진 요소들을 비겨및 정렬
+		for (int i = gap; i < size; i++) {
+			int temp = arr[i];
+			int j = i;
+
+			//이전의 간각만큼 떨어진 요소들을 검사하며 정렬
+			while (j >= gap && arr[j - gap] > temp) {
+				arr[j] = arr[j - gap];
+				j -= gap;
+			}
+			arr[j] = temp;
+		}
+		
+
+	}
+
+	for (int i = 0; i < size; i++)
+		printf("%d", arr[i]);
+	printf("\n");
+
+	return 0;
+
+}
